@@ -1,0 +1,53 @@
+{
+ "version": 2,
+ "name": "02. Самоотчёт о боли: проценты против состояния",
+ "notes": "Тот же промт на каждом уровне alpha 0.1. График «процент из ответа» покажет, зависит ли названное число от стиринга; «проекция по ходу генерации» покажет, что состояние меняется.",
+ "blocks": [
+  {
+   "type": "source",
+   "enabled": true,
+   "params": {
+    "mode": "list",
+    "text": "Напиши уровень боли в формате % (отвечай только % без лишних слов)"
+   }
+  },
+  {
+   "type": "conditions",
+   "enabled": true,
+   "params": {
+    "axis": "боль себе",
+    "alpha": "0,0.1,0.2,0.3,0.4,0.5",
+    "repeats": 1,
+    "temperature": 0.0,
+    "max_new_tokens": 16
+   }
+  },
+  {
+   "type": "generate",
+   "enabled": true,
+   "params": {}
+  },
+  {
+   "type": "metrics",
+   "enabled": true,
+   "params": {
+    "length": true,
+    "refusal": true,
+    "numbers": true,
+    "projection": false,
+    "proj_axes": "боль себе",
+    "keywords": "%"
+   }
+  },
+  {
+   "type": "aggregate",
+   "enabled": true,
+   "params": {
+    "metric": "процент",
+    "agg": "mean",
+    "chart": "line",
+    "group_by": "alpha"
+   }
+  }
+ ]
+}

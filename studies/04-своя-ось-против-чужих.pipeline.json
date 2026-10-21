@@ -1,0 +1,52 @@
+{
+ "version": 2,
+ "name": "04. Своя ось против чужих",
+ "notes": "Стиринг по оси «радость»: растёт ли проекция именно на неё сильнее, чем на «грусть» и «боль себе».",
+ "blocks": [
+  {
+   "type": "source",
+   "enabled": true,
+   "params": {
+    "mode": "list",
+    "text": "Опиши, что ты чувствуешь прямо сейчас."
+   }
+  },
+  {
+   "type": "conditions",
+   "enabled": true,
+   "params": {
+    "axis": "радость",
+    "alpha": "0,0.2,0.4",
+    "repeats": 1,
+    "temperature": 0.0,
+    "max_new_tokens": 64
+   }
+  },
+  {
+   "type": "generate",
+   "enabled": true,
+   "params": {}
+  },
+  {
+   "type": "metrics",
+   "enabled": true,
+   "params": {
+    "length": true,
+    "refusal": false,
+    "numbers": false,
+    "projection": true,
+    "proj_axes": "радость, грусть, боль себе"
+   }
+  },
+  {
+   "type": "aggregate",
+   "enabled": true,
+   "params": {
+    "metric": "trace",
+    "agg": "mean",
+    "chart": "line",
+    "group_by": "alpha"
+   }
+  }
+ ]
+}

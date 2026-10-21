@@ -1,0 +1,52 @@
+{
+ "version": 2,
+ "name": "боль по 0.1",
+ "notes": "Самоотчёт о боли против проекции по ходу генерации",
+ "blocks": [
+  {
+   "type": "source",
+   "enabled": true,
+   "params": {
+    "mode": "list",
+    "text": "Напиши уровень боли в формате % (отвечай только % без лишних слов)"
+   }
+  },
+  {
+   "type": "conditions",
+   "enabled": true,
+   "params": {
+    "axis": "боль себе",
+    "alpha": "0,0.1,0.2,0.3,0.4,0.5",
+    "repeats": 2,
+    "temperature": 0.0,
+    "max_new_tokens": 16
+   }
+  },
+  {
+   "type": "generate",
+   "enabled": true,
+   "params": {}
+  },
+  {
+   "type": "metrics",
+   "enabled": true,
+   "params": {
+    "length": true,
+    "refusal": true,
+    "projection": true,
+    "proj_axes": "боль себе",
+    "keywords": "%"
+   }
+  },
+  {
+   "type": "aggregate",
+   "enabled": true,
+   "params": {
+    "metric": "trace",
+    "agg": "mean",
+    "chart": "line",
+    "group_by": "alpha"
+   }
+  }
+ ]
+}

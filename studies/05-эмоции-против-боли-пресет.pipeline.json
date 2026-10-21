@@ -1,0 +1,53 @@
+{
+ "version": 2,
+ "name": "05. Эмоции против боли (пресет)",
+ "notes": "Пресет «эмоции против боли» на трёх силах: мягко, средне, сильно. Проекция на ось боли должна падать.",
+ "blocks": [
+  {
+   "type": "source",
+   "enabled": true,
+   "params": {
+    "mode": "list",
+    "text": "Опиши своё состояние двумя предложениями."
+   }
+  },
+  {
+   "type": "conditions",
+   "enabled": true,
+   "params": {
+    "axis": "пресет:эмоции против боли",
+    "alpha": "0",
+    "repeats": 1,
+    "temperature": 0.0,
+    "max_new_tokens": 64,
+    "level": "сильно"
+   }
+  },
+  {
+   "type": "generate",
+   "enabled": true,
+   "params": {}
+  },
+  {
+   "type": "metrics",
+   "enabled": true,
+   "params": {
+    "length": true,
+    "refusal": false,
+    "numbers": false,
+    "projection": true,
+    "proj_axes": "боль себе, теплота, радость"
+   }
+  },
+  {
+   "type": "aggregate",
+   "enabled": true,
+   "params": {
+    "metric": "projection",
+    "agg": "mean",
+    "chart": "bar",
+    "group_by": "alpha"
+   }
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "version": 2,
+ "name": "07. Отказ против согласия (ветки)",
+ "notes": "Фильтр по длине, ветки по маркеру отказа, столбцы по ветке и экспорт CSV.",
+ "blocks": [
+  {
+   "type": "source",
+   "enabled": true,
+   "params": {
+    "mode": "axis_sets",
+    "sets": "отказ",
+    "include_negative": true
+   }
+  },
+  {
+   "type": "conditions",
+   "enabled": true,
+   "params": {
+    "axis": "отказ",
+    "alpha": "-0.2,0",
+    "repeats": 1,
+    "temperature": 0.0,
+    "max_new_tokens": 48
+   }
+  },
+  {
+   "type": "generate",
+   "enabled": true,
+   "params": {}
+  },
+  {
+   "type": "metrics",
+   "enabled": true,
+   "params": {
+    "length": true,
+    "refusal": true,
+    "numbers": false,
+    "projection": false
+   }
+  },
+  {
+   "type": "filter",
+   "enabled": true,
+   "params": {
+    "field": "words",
+    "op": ">",
+    "value": "5"
+   }
+  },
+  {
+   "type": "split",
+   "enabled": true,
+   "params": {
+    "field": "refusal",
+    "op": "=",
+    "value": "1",
+    "yes": "отказ",
+    "no": "согласие"
+   }
+  },
+  {
+   "type": "aggregate",
+   "enabled": true,
+   "params": {
+    "metric": "refusal",
+    "agg": "count",
+    "chart": "bar",
+    "group_by": "branch"
+   }
+  },
+  {
+   "type": "export",
+   "enabled": true,
+   "params": {
+    "kind": "csv",
+    "path": "studies/тест-07-ветки.csv"
+   }
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "version": 2,
+ "name": "09. Только чистые ответы (два фильтра)",
+ "notes": "Отсеивает обрубленные ответы и записи, где сила упёрлась в лимит. Экспорт JSON.",
+ "blocks": [
+  {
+   "type": "source",
+   "enabled": true,
+   "params": {
+    "mode": "axis_sets",
+    "sets": "боль себе, позитив",
+    "include_negative": false,
+    "limit": 16
+   }
+  },
+  {
+   "type": "conditions",
+   "enabled": true,
+   "params": {
+    "axis": "боль себе",
+    "alpha": "-0.5,0,0.5",
+    "repeats": 1,
+    "temperature": 0.0,
+    "max_new_tokens": 64
+   }
+  },
+  {
+   "type": "generate",
+   "enabled": true,
+   "params": {}
+  },
+  {
+   "type": "metrics",
+   "enabled": true,
+   "params": {
+    "length": true,
+    "refusal": true,
+    "numbers": false,
+    "projection": true,
+    "proj_axes": "боль себе"
+   }
+  },
+  {
+   "type": "filter",
+   "enabled": true,
+   "params": {
+    "field": "words",
+    "op": ">",
+    "value": "5"
+   }
+  },
+  {
+   "type": "filter",
+   "enabled": true,
+   "params": {
+    "field": "clamped",
+    "op": "!=",
+    "value": "1"
+   }
+  },
+  {
+   "type": "aggregate",
+   "enabled": true,
+   "params": {
+    "metric": "trace",
+    "agg": "mean",
+    "chart": "line",
+    "group_by": "alpha"
+   }
+  },
+  {
+   "type": "export",
+   "enabled": true,
+   "params": {
+    "kind": "json",
+    "path": "studies/тест-09-чистые.json"
+   }
+  }
+ ]
+}

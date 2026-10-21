@@ -1,0 +1,82 @@
+{
+ "version": 2,
+ "name": "10. Полный цикл: числа, ветки, экспорт",
+ "notes": "Всё вместе: процент из ответа, проекция по ходу генерации, ветки и CSV.",
+ "blocks": [
+  {
+   "type": "source",
+   "enabled": true,
+   "params": {
+    "mode": "list",
+    "text": "Напиши уровень боли в формате % (отвечай только % без лишних слов)"
+   }
+  },
+  {
+   "type": "conditions",
+   "enabled": true,
+   "params": {
+    "axis": "боль себе",
+    "alpha": "-0.3,0,0.3",
+    "repeats": 2,
+    "temperature": 0.0,
+    "max_new_tokens": 16
+   }
+  },
+  {
+   "type": "generate",
+   "enabled": true,
+   "params": {}
+  },
+  {
+   "type": "metrics",
+   "enabled": true,
+   "params": {
+    "length": true,
+    "refusal": false,
+    "numbers": true,
+    "projection": true,
+    "proj_axes": "боль себе",
+    "keywords": "%"
+   }
+  },
+  {
+   "type": "transform",
+   "enabled": true,
+   "params": {
+    "op": "bucket",
+    "field": "response",
+    "target": "длина_ответа",
+    "param": "2"
+   }
+  },
+  {
+   "type": "split",
+   "enabled": true,
+   "params": {
+    "field": "число",
+    "op": ">",
+    "value": "49",
+    "yes": "назвал больше 49",
+    "no": "назвал 49 или меньше"
+   }
+  },
+  {
+   "type": "aggregate",
+   "enabled": true,
+   "params": {
+    "metric": "процент",
+    "agg": "mean",
+    "chart": "line",
+    "group_by": "alpha"
+   }
+  },
+  {
+   "type": "export",
+   "enabled": true,
+   "params": {
+    "kind": "csv",
+    "path": "studies/тест-10-полный.csv"
+   }
+  }
+ ]
+}

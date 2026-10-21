@@ -1,0 +1,18 @@
+# Зависимости Pain Axis Workbench
+#
+# Обязательный минимум: с ним работает синтетический демо-стенд, чат, оси,
+# пресеты, матрица и вкладка «Исследования».
+numpy>=1.24
+
+# Для реальных моделей (без них доступен только демо-стенд).
+# На Windows ставьте torch с CUDA, иначе счёт пойдёт на процессоре:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu126
+torch>=2.2
+transformers>=4.44
+huggingface_hub>=0.23
+accelerate>=0.30          # device_map="auto"
+bitsandbytes>=0.43        # 4-битная загрузка (NF4), только x86-64
+
+# Инструменты разработки и сборки
+Pillow>=10.0              # иконка приложения и баннер
+pyinstaller>=6.0          # сборка dist/PainAxis.exe

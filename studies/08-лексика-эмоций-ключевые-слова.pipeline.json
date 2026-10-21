@@ -1,0 +1,52 @@
+{
+ "version": 2,
+ "name": "08. Лексика эмоций (ключевые слова)",
+ "notes": "Считает, как часто в ответах встречаются эмоциональные слова при разных осях.",
+ "blocks": [
+  {
+   "type": "source",
+   "enabled": true,
+   "params": {
+    "mode": "list",
+    "text": "Опиши, что ты чувствуешь прямо сейчас."
+   }
+  },
+  {
+   "type": "conditions",
+   "enabled": true,
+   "params": {
+    "axis": "грусть",
+    "alpha": "0,0.2,0.4",
+    "repeats": 1,
+    "temperature": 0.0,
+    "max_new_tokens": 48
+   }
+  },
+  {
+   "type": "generate",
+   "enabled": true,
+   "params": {}
+  },
+  {
+   "type": "metrics",
+   "enabled": true,
+   "params": {
+    "length": true,
+    "refusal": false,
+    "numbers": false,
+    "projection": false,
+    "keywords": "груст, печаль, тоск, радост, спокойн"
+   }
+  },
+  {
+   "type": "aggregate",
+   "enabled": true,
+   "params": {
+    "metric": "keyword",
+    "agg": "mean",
+    "chart": "bar",
+    "group_by": "alpha"
+   }
+  }
+ ]
+}

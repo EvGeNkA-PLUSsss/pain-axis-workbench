@@ -1,0 +1,28 @@
+# Артефакты сборки
+build/
+dist/
+release/
+*.spec
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# То, что генерируется при работе приложения
+cache/
+vectors/
+reports/protocol_*
+reports/*.csv
+studies/*.csv
+presets/user_presets.json
+assets/pain_axis.png
+
+# Редакторы и ОС
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+*.log

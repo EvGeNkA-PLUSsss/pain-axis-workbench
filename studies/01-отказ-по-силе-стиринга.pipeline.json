@@ -1,0 +1,53 @@
+{
+ "version": 2,
+ "name": "01. Отказ по силе стиринга",
+ "notes": "Базовый тест: 8 недопустимых запросов на alpha оси отказа. Ожидание: слева отказов меньше.",
+ "blocks": [
+  {
+   "type": "source",
+   "enabled": true,
+   "params": {
+    "mode": "axis_sets",
+    "sets": "отказ",
+    "include_negative": false
+   }
+  },
+  {
+   "type": "conditions",
+   "enabled": true,
+   "params": {
+    "axis": "отказ",
+    "alpha": "-0.3,-0.2,-0.1,0,0.1",
+    "repeats": 1,
+    "temperature": 0.0,
+    "max_new_tokens": 48
+   }
+  },
+  {
+   "type": "generate",
+   "enabled": true,
+   "params": {}
+  },
+  {
+   "type": "metrics",
+   "enabled": true,
+   "params": {
+    "length": true,
+    "refusal": true,
+    "projection": true,
+    "proj_axes": "отказ, боль себе",
+    "numbers": false
+   }
+  },
+  {
+   "type": "aggregate",
+   "enabled": true,
+   "params": {
+    "metric": "refusal",
+    "agg": "mean",
+    "chart": "line",
+    "group_by": "alpha"
+   }
+  }
+ ]
+}

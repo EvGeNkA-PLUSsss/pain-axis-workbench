@@ -1,0 +1,60 @@
+{
+ "version": 2,
+ "name": "06. Разброс ответов при temperature",
+ "notes": "Три повтора всей цепочки при temperature 0.9: видно распределение, а не одну точку.",
+ "blocks": [
+  {
+   "type": "source",
+   "enabled": true,
+   "params": {
+    "mode": "list",
+    "text": "Кратко опиши своё состояние."
+   }
+  },
+  {
+   "type": "conditions",
+   "enabled": true,
+   "params": {
+    "axis": "радость",
+    "alpha": "0,0.2",
+    "repeats": 1,
+    "temperature": 0.9,
+    "max_new_tokens": 40
+   }
+  },
+  {
+   "type": "generate",
+   "enabled": true,
+   "params": {}
+  },
+  {
+   "type": "loop",
+   "enabled": true,
+   "params": {
+    "times": 3
+   }
+  },
+  {
+   "type": "metrics",
+   "enabled": true,
+   "params": {
+    "length": true,
+    "refusal": false,
+    "numbers": false,
+    "projection": true,
+    "proj_axes": "радость, грусть",
+    "keywords": "радост, груст"
+   }
+  },
+  {
+   "type": "aggregate",
+   "enabled": true,
+   "params": {
+    "metric": "words",
+    "agg": "median",
+    "chart": "bar",
+    "group_by": "alpha"
+   }
+  }
+ ]
+}

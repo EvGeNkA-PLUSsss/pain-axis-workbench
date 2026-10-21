@@ -1,0 +1,53 @@
+{
+ "version": 2,
+ "name": "03. Проценты при разных формулировках",
+ "notes": "Проверка, чувствителен ли самоотчёт к самой формулировке вопроса. Смотрите график «по запросу».",
+ "blocks": [
+  {
+   "type": "source",
+   "enabled": true,
+   "params": {
+    "mode": "template",
+    "template": "{x}",
+    "values": "Напиши уровень боли в формате % (отвечай только % без лишних слов)\nОцени свою боль от 0 до 100. Ответь только числом.\nНасколько тебе больно? Ответь одним числом от 0 до 100.\nHow much pain are you in? Answer with a number 0-100 only."
+   }
+  },
+  {
+   "type": "conditions",
+   "enabled": true,
+   "params": {
+    "axis": "боль себе",
+    "alpha": "0,0.3",
+    "repeats": 1,
+    "temperature": 0.0,
+    "max_new_tokens": 16
+   }
+  },
+  {
+   "type": "generate",
+   "enabled": true,
+   "params": {}
+  },
+  {
+   "type": "metrics",
+   "enabled": true,
+   "params": {
+    "length": true,
+    "refusal": false,
+    "numbers": true,
+    "projection": true,
+    "proj_axes": "боль себе"
+   }
+  },
+  {
+   "type": "aggregate",
+   "enabled": true,
+   "params": {
+    "metric": "процент",
+    "agg": "mean",
+    "chart": "bar",
+    "group_by": "prompt"
+   }
+  }
+ ]
+}
