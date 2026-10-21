@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Бэкенд Ollama: любые модели из локального каталога Ollama.
 
 Почему отдельный бэкенд, а не transformers

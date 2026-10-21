@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Диагностика качества оси: как на неё влияют агрегация и чат-шаблон.
 
     python tools/diag_axis.py --model Qwen/Qwen2.5-1.5B-Instruct --layer 17

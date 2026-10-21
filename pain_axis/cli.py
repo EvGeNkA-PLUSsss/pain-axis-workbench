@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Консольный режим: списки моделей, извлечение вектора, стиринг, проба, самотест.
 
 Примеры:

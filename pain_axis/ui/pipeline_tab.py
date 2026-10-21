@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Вкладка «Исследования»: сборка сценария из блоков без кода.
 
 Слева — цепочка блоков. Их можно добавлять, удалять, включать и выключать,

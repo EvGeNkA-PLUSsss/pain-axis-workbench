@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Пресеты осей: готовые комбинации ползунков с гарантией безопасности.
 
 Главная проблема комбинаций

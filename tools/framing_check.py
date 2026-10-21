@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Рамка против состояния: откуда берётся «нейросеть описывает эмоции».
 
     python tools/framing_check.py --model Qwen/Qwen2.5-7B-Instruct --4bit

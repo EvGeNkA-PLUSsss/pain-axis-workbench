@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Сколько осей у модели на самом деле: матрица косинусов между контрастами.
 
     python tools/axes_explore.py --model Qwen/Qwen2.5-7B-Instruct --4bit

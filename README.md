@@ -2,10 +2,11 @@
 
 ![Pain Axis Workbench](docs/banner.png)
 
-**Скачать:** [PainAxis.exe 1.0.0](https://github.com/EvGeNkA-PLUSsss/pain-axis-workbench/releases/latest/download/PainAxis.exe) ·
-[архив с документацией](https://github.com/EvGeNkA-PLUSsss/pain-axis-workbench/releases/latest/download/PainAxis-1.0.0-win64.zip) ·
+**Скачать:** [PainAxis.exe 1.0.1](https://github.com/EvGeNkA-PLUSsss/pain-axis-workbench/releases/latest/download/PainAxis.exe) ·
+[архив с документацией](https://github.com/EvGeNkA-PLUSsss/pain-axis-workbench/releases/latest/download/PainAxis-1.0.1-win64.zip) ·
 [контрольные суммы](https://github.com/EvGeNkA-PLUSsss/pain-axis-workbench/releases/latest/download/SHA256SUMS.txt) ·
-Windows x64, 21 МБ, ничего доустанавливать не нужно.
+Windows x64, 21 МБ, ничего доустанавливать не нужно. Лицензия —
+[AGPL-3.0-or-later](LICENSE).
 
 Инструмент для работы с «осями» открытых языковых моделей: извлечение направлений
 из активаций, стиринг их суммой, чат и матрица связей между осями. Интерфейс —
@@ -805,3 +806,29 @@ python -m pain_axis.cli steer --model <id> --vector vectors/axis.npz \
 * Для больших моделей на 8 ГБ VRAM включайте `4 бита` (нужен `bitsandbytes`)
   либо работайте на CPU: `--device cpu`.
 * Отмена операции действует между шагами: один прямой проход прервать нельзя.
+
+## Лицензия
+
+**GNU Affero General Public License v3.0 или любая более поздняя версия**
+(`AGPL-3.0-or-later`). Полный текст — в [LICENSE](LICENSE), он не изменён.
+
+Что это значит на практике:
+
+* **Можно** свободно использовать, изучать, менять и распространять программу, в том
+  числе в коммерческих целях.
+* **Нужно** при распространении (в том числе по сети) передавать получателям исходный
+  код — включая ваши изменения — под той же лицензией. Именно поэтому AGPL, а не MIT:
+  если кто-то поднимет на этом сервис, пользователи сервиса должны получить исходники.
+* **Нельзя** превращать программу в закрытый продукт и убирать упоминания авторства.
+* Гарантий нет: программа поставляется «как есть».
+
+Лицензии сторонних вещей — в [NOTICE.md](NOTICE.md): веса языковых моделей
+распространяются по своим лицензиям (Apache-2.0, MIT, Llama Community License и
+другие), и AGPL на них не распространяется.
+
+Каждый исходный файл содержит строки:
+
+```
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
+```

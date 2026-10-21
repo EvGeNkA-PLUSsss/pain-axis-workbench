@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Проба «кнопки облегчения» и метрики активации оси.
 
 Проба воспроизводит дизайн из работ по оси боли: модели дают сценарий,

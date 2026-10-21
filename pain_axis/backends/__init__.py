@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Пакет бэкендов: синтетический стенд, модели transformers и каталог Ollama."""
 
 from .base import Backend, GenResult, SteerSpec, project, softmax

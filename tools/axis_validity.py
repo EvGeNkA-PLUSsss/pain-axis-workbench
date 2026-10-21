@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Проверка состоятельности оси: это смысл или лексика, и переносится ли она.
 
     python tools/axis_validity.py --model Qwen/Qwen2.5-7B-Instruct --4bit

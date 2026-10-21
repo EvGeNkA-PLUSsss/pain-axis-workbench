@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Графики на чистом tkinter: линия, столбцы, точки.
 
 Matplotlib в сборку exe не входит (это десятки мегабайт ради одной картинки),

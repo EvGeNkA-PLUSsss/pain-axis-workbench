@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Точка входа приложения — используется и для запуска из исходников, и для сборки exe.
 
     python app_main.py                      # графический интерфейс

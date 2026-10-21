@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Замер скорости конвейера на выбранной модели: полезно, чтобы понять, что реально
 потянет ваша видеокарта.
 

@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Реестр из 25 открытых языковых моделей, доступных для анализа «оси боли».
 
 Все числовые поля, помеченные как *hint*, взяты из публичных карточек моделей и

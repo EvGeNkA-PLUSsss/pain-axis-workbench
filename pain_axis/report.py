@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Экспорт результатов: JSON-отчёт, CSV по слоям, CSV по пробе, markdown-сводка.
 
 В каждый отчёт попадает флаг ``synthetic``. Если он ``true``, все числа получены
@@ -17,7 +19,7 @@ import numpy as np
 from .directions import AxisResult, label_of
 
 APP_NAME = "Pain Axis Workbench"
-APP_VERSION = "1.0.0"
+APP_VERSION = "1.0.1"
 
 
 def make_payload(

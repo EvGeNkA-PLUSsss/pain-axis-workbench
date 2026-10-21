@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Подбор рабочего alpha и формулировки промпта под конкретную модель.
 
     python tools/tune_alpha.py --model Qwen/Qwen2.5-1.5B-Instruct

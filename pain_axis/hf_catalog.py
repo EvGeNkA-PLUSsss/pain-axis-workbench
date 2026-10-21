@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Каталог Hugging Face: поиск любых моделей, их реальные параметры и кэш метаданных.
 
 Что делает модуль

@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Конвейер блоков: написание сценариев без кода.
 
 Чем это отличается от ``study.py``

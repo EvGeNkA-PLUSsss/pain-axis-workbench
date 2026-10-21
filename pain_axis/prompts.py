@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Контрастивный датасет для извлечения «оси боли».
 
 Логика (повторяет подход работ по осям эмоций/боли):

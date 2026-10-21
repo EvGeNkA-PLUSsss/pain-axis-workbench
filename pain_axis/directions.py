@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Извлечение и хранение осей («вектор боли» и контрольные оси).
 
 Метод — разность средних (difference-in-means):

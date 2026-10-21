@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Скриншоты интерфейса для документации: окно чата и матрица осей.
 
     python tools/gui_screenshot.py [папка_вывода]

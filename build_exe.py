@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Сборка одиночного exe: интерфейс + numpy внутри, torch подключается снаружи.
 
     python build_exe.py                 # обычная сборка (~40-60 МБ)

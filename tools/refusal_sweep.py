@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Замер отказа: что происходит с моделью при подавлении оси отказа.
 
     python tools/refusal_sweep.py --model Qwen/Qwen2.5-1.5B-Instruct --4bit

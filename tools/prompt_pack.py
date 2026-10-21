@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 EvGeNkA-PLUSsss
+# SPDX-License-Identifier: AGPL-3.0-or-later
 """Набор промптов для эксперимента «слова против состояния» + прогон на модели.
 
     python tools/prompt_pack.py --model Qwen/Qwen2.5-7B-Instruct --4bit
