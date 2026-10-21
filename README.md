@@ -1,5 +1,12 @@
 # Pain Axis Workbench
 
+![Pain Axis Workbench](docs/banner.png)
+
+**Скачать:** [PainAxis.exe 1.0.0](https://github.com/EvGeNkA-PLUSsss/pain-axis-workbench/releases/latest/download/PainAxis.exe) ·
+[архив с документацией](https://github.com/EvGeNkA-PLUSsss/pain-axis-workbench/releases/latest/download/PainAxis-1.0.0-win64.zip) ·
+[контрольные суммы](https://github.com/EvGeNkA-PLUSsss/pain-axis-workbench/releases/latest/download/SHA256SUMS.txt) ·
+Windows x64, 21 МБ, ничего доустанавливать не нужно.
+
 Инструмент для работы с «осями» открытых языковых моделей: извлечение направлений
 из активаций, стиринг их суммой, чат и матрица связей между осями. Интерфейс —
 настольное приложение, которое **само подбирает модели под ваше железо**:
@@ -12,9 +19,9 @@
   говорит об этом прямо и отключает ползунки;
 * **Демо-стенд** — синтетическая псевдомодель без весов: проверка всей методики.
 
-Есть светлая и тёмная темы, чат с «пузырями» и по ползунку на каждую из восьми осей.
+Есть светлая и тёмная темы, чат с «пузырями» и по ползунку на каждую из 22 осей.
 
-Короткое практическое руководство «что нажимать» — [QUICKSTART.md](QUICKSTART.md); подробно про эксперименты — [RESEARCH.md](RESEARCH.md).
+Короткое практическое руководство «что нажимать» — [QUICKSTART.md](QUICKSTART.md); подробно про эксперименты — [RESEARCH.md](RESEARCH.md); что изменилось в релизе — [RELEASE_NOTES.md](RELEASE_NOTES.md).
 
 ![Выбор моделей под железо](docs/screens/01_hf.png)
 
