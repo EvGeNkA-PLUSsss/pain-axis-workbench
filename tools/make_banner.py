@@ -214,10 +214,12 @@ def build_avatar() -> Path:
     title = pick(["BigShoulders-Bold.ttf", "WorkSans-Bold.ttf"], 132)
     mono = pick(["IBMPlexMono-Regular.ttf", "JetBrainsMono-Regular.ttf"], 22)
 
-    # линия-ось по диагонали
+    # линия-ось ниже текста: ничего не пересекает
     layer = Image.new("RGBA", size, (0, 0, 0, 0))
     ld = ImageDraw.Draw(layer)
-    pts = [(90, 372), (170, 340), (250, 300), (330, 244), (410, 176)]
+    base = size[1] - margin - 62
+    pts = [(margin + 40, base), (margin + 128, base - 34), (margin + 216, base - 70),
+           (margin + 304, base - 108), (margin + 392, base - 148)]
     ld.line(pts, fill=ACCENT + (255,), width=4, joint="curve")
     img.alpha_composite(layer.filter(ImageFilter.GaussianBlur(10)))
     img.alpha_composite(layer)
@@ -227,7 +229,7 @@ def build_avatar() -> Path:
 
     spaced(draw, (margin + 6, margin + 8), "PAIN", title, TEXT, tracking=1.0)
     spaced(draw, (margin + 6, margin + 128), "AXIS", title, MUTED, tracking=1.0)
-    spaced(draw, (margin + 8, size[1] - margin - 30), "WORKBENCH 1.0",
+    spaced(draw, (margin + 8, size[1] - margin - 20), "WORKBENCH 1.0",
            mono, MUTED, tracking=1.6)
     img.convert("RGB").save(OUT_AVATAR, quality=95)
     return OUT_AVATAR
